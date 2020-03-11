@@ -8,4 +8,3 @@ intro: >-
   opportunity.
 image: assets/3.jpg
 ---
-

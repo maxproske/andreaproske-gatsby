@@ -5,5 +5,24 @@
  */
 
 module.exports = {
-  plugins: [`gatsby-plugin-netlify-cms`],
+  plugins: [
+    `gatsby-plugin-netlify-cms`,
+    {
+      // Look for images uploaded by Netlify CMS
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/static/assets`,
+        name: "images",
+      },
+    },
+    {
+      // Look for markdown files created by Netlify CMS
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/content`,
+      },
+    },
+    "gatsby-transformer-remark",
+  ],
 }

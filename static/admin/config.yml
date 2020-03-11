@@ -1,8 +1,7 @@
-backend:
-  name: github
-  repo: maxproske/andreaproske-2
-
-publish_mode: editorial_workflow
+backend: 
+  # Give clients the option to login using Identity
+  name: git-gateway
+  branch: master
 
 media_folder: static/assets
 public_folder: assets
